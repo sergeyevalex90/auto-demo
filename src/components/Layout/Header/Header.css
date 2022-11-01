@@ -1,0 +1,29 @@
+.header {
+  padding: 12px;
+  background-color: #757ce8;
+  color: #fff;
+}
+
+.header-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-logo {
+  font-weight: 600;
+  font-size: 25px;
+}
+
+.header-menu {
+  padding: 7px;
+}
+
+.header-menu a {
+  font-size: 16px;
+  margin-right: 24px;
+}
+
+.header-menu a:last-child {
+  margin-right: 0;
+}

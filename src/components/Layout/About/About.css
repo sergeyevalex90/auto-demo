@@ -1,0 +1,40 @@
+.about {
+  margin-top: 100px;
+  background-color: #efefef;
+  padding: 40px 0 75px;
+}
+
+.about-inner {
+  display: flex;
+}
+
+.about-desc {
+  width: 45%;
+}
+
+.about-image {
+  width: 55%;
+}
+
+.about-desc {
+  padding-right: 5rem;
+}
+
+.about-desc p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.about-desc h3:first-child {
+  margin-top: 0;
+}
+
+.about-title {
+  text-align: right;
+}
+
+.about-desc h3 {
+  font-size: 28px;
+  font-family: 'Lato', sans-serif;
+  margin: 35px 0;
+}

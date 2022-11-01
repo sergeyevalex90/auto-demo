@@ -1,0 +1,50 @@
+.slider {
+  position: relative;
+  margin-top: 75px;
+  overflow: hidden;
+}
+
+.slider-img {
+  width: 75%;
+}
+
+.slider-circle {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+}
+
+.slider-circle.dark-blue {
+  background-color: #cddc39;
+  top: 20%;
+  right: -5%;
+  z-index: 20;
+}
+
+.slider-circle.blue {
+  background-color: #2875a9;
+  top: -2%;
+  right: -20%;
+  z-index: 10;
+}
+
+.slider-info {
+  position: absolute;
+  bottom: 20%;
+  right: 5%;
+  text-align: center;
+  z-index: 30;
+}
+
+.slider-model-name {
+  font-family: 'Lato', sans-serif;
+  font-size: 73px;
+  color: #fff;
+}
+
+.slider-model-year {
+  font-size: 28px;
+  color: #fff;
+  margin: 20px 0;
+}
