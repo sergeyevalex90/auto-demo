@@ -16,6 +16,9 @@ const Footer = () => {
             Contacts
           </Link>
         </div>
+        <div className="copyright">
+          © 2022 AUTO DEMO, Inc. All Rights Reserved
+        </div>
       </div>
     </footer>
   );

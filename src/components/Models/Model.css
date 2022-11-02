@@ -1,0 +1,26 @@
+.model-item {
+  flex: 0 0 25%;
+  box-sizing: border-box;
+}
+
+.model-inner {
+  margin: 0 15px 45px;
+}
+
+.models-title {
+  text-align: left;
+}
+
+.model-item img {
+  width: 70%;
+  margin: auto;
+}
+
+.model-table-data td {
+  padding: 6px 0;
+  font-size: 12px;
+}
+
+.model-table-data tr:last-child td {
+  font-weight: 700;
+}

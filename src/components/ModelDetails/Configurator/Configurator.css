@@ -1,0 +1,12 @@
+.configurator {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  padding: 25px;
+}
+
+.configurator-select {
+  display: flex;
+  margin-bottom: 40px;
+}

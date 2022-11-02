@@ -1,7 +1,7 @@
 .header {
   padding: 12px;
-  background-color: #757ce8;
-  color: #fff;
+  background-color: #000000cc;
+  color: #f5f5f7;
 }
 
 .header-wrapper {
@@ -13,6 +13,7 @@
 .header-logo {
   font-weight: 600;
   font-size: 25px;
+  max-width: 110px;
 }
 
 .header-menu {
@@ -22,6 +23,15 @@
 .header-menu a {
   font-size: 16px;
   margin-right: 24px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.header-menu a:hover {
+  color: #fff;
 }
 
 .header-menu a:last-child {
