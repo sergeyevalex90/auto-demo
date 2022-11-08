@@ -6,7 +6,7 @@ import './Models.css';
 const Models = () => {
   return (
     <div className="models">
-      <h1>BMW Lineup</h1>
+      <h1>Available cars</h1>
       <div className="wrapper">
         <div className="models-inner">
           {Cars.map((model) => (

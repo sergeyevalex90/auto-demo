@@ -1,10 +1,13 @@
 import React from 'react';
-import './ConfiguratorEngine.css';
-import Radio from '@mui/material/Radio';
-import RadioGroup from '@mui/material/RadioGroup';
-import FormControlLabel from '@mui/material/FormControlLabel';
+import ConfiguratorEngineItem from './ConfiguratorEngineItem/ConfiguratorEngineItem';
 
-const ConfiguratorEngine = () => {
+//Material UI
+import RadioGroup from '@mui/material/RadioGroup';
+
+//Styles
+import './ConfiguratorEngine.css';
+
+const ConfiguratorEngine = (props) => {
   return (
     <div className="configurator-group">
       <div className="configurator-label">Engine</div>
@@ -12,27 +15,16 @@ const ConfiguratorEngine = () => {
         className="radio-options"
         row
         aria-labelledby="demo-radio-buttons-group-label"
-        defaultValue="female"
+        defaultValue={props.engine[0].volume}
         name="radio-buttons-group"
       >
-        <FormControlLabel
-          className="radio-label"
-          value="2"
-          control={<Radio />}
-          label="2.0"
-        />
-        <FormControlLabel
-          className="radio-label"
-          value="2.5"
-          control={<Radio />}
-          label="2.5"
-        />
-        <FormControlLabel
-          className="radio-label"
-          value="3"
-          control={<Radio />}
-          label="3.0"
-        />
+        {props.engine.map((engineItem) => (
+          <ConfiguratorEngineItem
+            key={engineItem.volume}
+            engine={engineItem}
+            onChangeEngine={props.onChangeEngine}
+          />
+        ))}
       </RadioGroup>
     </div>
   );

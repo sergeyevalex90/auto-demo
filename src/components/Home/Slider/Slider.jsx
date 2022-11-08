@@ -1,7 +1,10 @@
-import sliderImg from '../../../assets/img/bmw-5-yellow.jpg';
+import sliderImg from '../../../assets/img/slides/bmw-5-series-slide.jpg';
+
+//Styles
 import './Slider.css';
+
+//Matertial UI
 import Button from '@mui/material/Button';
-import { styled } from '@mui/material/styles';
 
 const Slider = (props) => {
   return (
@@ -16,7 +19,7 @@ const Slider = (props) => {
           <div className="slider-info">
             <div className="slider-model-name">BMW X300</div>
             <div className="slider-model-year">2023 edition</div>
-            <Button href="#" variant="contained" size="small">
+            <Button href="/models/120" variant="contained" size="small">
               Read more
             </Button>
           </div>

@@ -1,14 +1,1 @@
-.salon-nav img {
-  width: 60px;
-  height: 60px;
-  border: 1px solid transparent;
-  border-radius: 50%;
-}
 
-.salon-nav {
-  margin-right: 20px;
-}
-
-.salon-link:last-child .salon-nav {
-  margin-right: 0;
-}

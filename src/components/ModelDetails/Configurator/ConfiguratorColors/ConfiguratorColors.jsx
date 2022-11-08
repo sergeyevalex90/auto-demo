@@ -1,36 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './ConfiguratorColors.css';
+import ConfiguratorColorItem from './ConfiguratorColorItem/ConfiguratorColorItem';
 
-const ConfiguratorColors = () => {
+const ConfiguratorColors = (props) => {
+  const defaultColor = props.colors.find((color) => {
+    return color.default === true;
+  });
+
+  const [activeColor, setActiveColor] = useState(defaultColor.colorName);
+
+  // Set active color on click
+  const changeColorHandler = (color) => {
+    setActiveColor(color.colorName);
+    props.onChangeColor(color);
+  };
+
   return (
     <div className="configurator-group">
-      <div className="configurator-label">Color</div>
+      <div className="configurator-label">Colors</div>
       <div className="configurator-select">
-        <div className="color-link active">
-          <div className="color-nav color-black">
-            <div className="color-cirle"></div>
-          </div>
-        </div>
-        <div className="color-link">
-          <div className="color-nav color-white">
-            <div className="color-cirle"></div>
-          </div>
-        </div>
-        <div className="color-link">
-          <div className="color-nav color-brown">
-            <div className="color-cirle"></div>
-          </div>
-        </div>
-        <div className="color-link">
-          <div className="color-nav color-blue">
-            <div className="color-cirle"></div>
-          </div>
-        </div>
-        <div className="color-link">
-          <div className="color-nav color-red">
-            <div className="color-cirle"></div>
-          </div>
-        </div>
+        {props.colors.map((color) => (
+          <ConfiguratorColorItem
+            active={activeColor}
+            key={color.colorName}
+            color={color}
+            onChangeColor={changeColorHandler}
+          />
+        ))}
       </div>
     </div>
   );

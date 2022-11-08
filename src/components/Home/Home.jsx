@@ -4,7 +4,7 @@ import About from './About/About';
 import PopularModels from './PopularModels/PopularModels';
 import Cars from '../../config/Cars';
 
-const Layout = (props) => {
+const Home = (props) => {
   return (
     <React.Fragment>
       <Slider />
@@ -14,4 +14,4 @@ const Layout = (props) => {
   );
 };
 
-export default Layout;
+export default Home;

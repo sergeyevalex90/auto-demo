@@ -1,3 +1,4 @@
+//Material UI
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -9,32 +10,39 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
+import Link from '@mui/material/Link';
+
+//Styles
 import './Model.css';
 
+//Creating table
 function createData(name, value) {
   return { name, value };
 }
 
 const Model = (props) => {
-  //console.log(props.model);
+  //Get color from model
+  let color = props.model.colors.filter((color) => {
+    return color.default === true;
+  });
+  color = color.shift();
+
+  //Creating table rows with data
   const rows = [
     createData('Transmission', props.model.transmission),
-    createData('Color', props.model.color),
-    createData('Salon', props.model.salon),
-    createData('Fuel', props.model.fuel),
-    createData('Engine', props.model.engine),
-    createData('Price', props.model.price),
+    createData('Color', color.colorName),
+    createData('Salon', props.model.salons[0].type),
+    createData('Fuel', props.model.fuel[0].type),
+    createData('Engine', props.model.engine[0].volume),
+    createData('Price', props.model.price + ' $'),
   ];
 
   return (
     <Box component="div" className="model-item">
       <Card sx={{ maxWidth: 350 }} className="model-inner">
-        <CardMedia
-          component="img"
-          height="140"
-          image={props.model.img}
-          alt="bmw"
-        />
+        <Link className="model-link-img" href={`/models/${props.model.id}`}>
+          <CardMedia component="img" height="140" image={color.img} alt="bmw" />
+        </Link>
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
             {props.model.name}
@@ -61,7 +69,7 @@ const Model = (props) => {
         </CardContent>
         <CardActions>
           <Button size="small" href={`/models/${props.model.id}`}>
-            View more
+            Build and Price
           </Button>
         </CardActions>
       </Card>
