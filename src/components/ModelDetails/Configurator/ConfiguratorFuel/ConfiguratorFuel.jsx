@@ -17,6 +17,14 @@ const ConfiguratorFuel = (props) => {
     props.onChangeFuel(event.target.value);
   };
 
+  const getPriceOfFuel = (item) => {
+    if (item.price !== 0) {
+      return ' +' + item.price + ' $';
+    } else {
+      return '';
+    }
+  };
+
   return (
     <div className="configuration-group">
       <div className="configurator-select">
@@ -35,7 +43,7 @@ const ConfiguratorFuel = (props) => {
           >
             {props.fuel.map((fuelItem) => (
               <MenuItem key={Math.random().toString()} value={fuelItem.type}>
-                {fuelItem.type}
+                {fuelItem.type + getPriceOfFuel(fuelItem)}
               </MenuItem>
             ))}
           </Select>

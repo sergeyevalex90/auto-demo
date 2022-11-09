@@ -1,13 +1,13 @@
 import React from 'react';
-import Slider from './Slider/Slider';
 import About from './About/About';
 import PopularModels from './PopularModels/PopularModels';
 import Cars from '../../config/Cars';
+import MainSlider from './MainSlider/MainSlider';
 
 const Home = (props) => {
   return (
     <React.Fragment>
-      <Slider />
+      <MainSlider />
       <About />
       <PopularModels models={Cars} />
     </React.Fragment>

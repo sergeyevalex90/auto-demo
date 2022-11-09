@@ -1,4 +1,5 @@
 import React from 'react';
+import ConfiguratorTooltip from '../../ConfiguratorTooltip/ConfiguratorTooltip';
 
 // Material UI
 import Radio from '@mui/material/Radio';
@@ -10,13 +11,17 @@ const ConfiguratorEngineItem = (props) => {
   };
 
   return (
-    <FormControlLabel
-      className="radio-label"
-      value={props.engine.volume}
-      control={<Radio />}
-      label={props.engine.volume}
-      onClick={changeEngineHandler}
-    />
+    <ConfiguratorTooltip
+      title={props.engine.price !== 0 ? '+' + props.engine.price + ' $' : ''}
+    >
+      <FormControlLabel
+        className="radio-label"
+        value={props.engine.volume}
+        control={<Radio />}
+        label={props.engine.volume}
+        onClick={changeEngineHandler}
+      />
+    </ConfiguratorTooltip>
   );
 };
 

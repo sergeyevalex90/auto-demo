@@ -16,7 +16,9 @@ body {
 
 .wrapper {
   max-width: 1300px;
+  padding: 0 25px;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 img {
@@ -28,4 +30,15 @@ img {
   font-size: 50px;
   margin-bottom: 50px;
   font-family: 'Lato', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+@media screen and (max-width: 500px) {
+  .wrapper {
+    padding: 0 5px;
+  }
 }

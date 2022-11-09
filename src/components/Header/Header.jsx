@@ -1,7 +1,14 @@
 import React from 'react';
-import Link from '@mui/material/Link';
+import MobileMenu from './MobileMenu/MobileMenu';
+
+//Styles
 import './Header.css';
+
+//Assets
 import logoImg from '../../assets/img/bmw-logo.svg';
+
+//Material UI
+import Link from '@mui/material/Link';
 
 const Header = (props) => {
   return (
@@ -21,6 +28,7 @@ const Header = (props) => {
             Contacts
           </Link>
         </div>
+        <MobileMenu />
       </div>
     </header>
   );

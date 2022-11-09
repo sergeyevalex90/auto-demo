@@ -1,4 +1,5 @@
 import React from 'react';
+import ConfiguratorTooltip from '../../ConfiguratorTooltip/ConfiguratorTooltip';
 
 //Styles
 import './ConfiguratorSalonItem.css';
@@ -10,15 +11,19 @@ const ConfiguratorSalonItem = (props) => {
   };
 
   return (
-    <div
-      className={`salon-link ${
-        props.active === props.salon.type ? 'active' : ''
-      }`}
+    <ConfiguratorTooltip
+      title={props.salon.price !== 0 ? '+ ' + props.salon.price + ' $' : ''}
     >
-      <div className="salon-nav" onClick={changeActiveSalon}>
-        <img src={props.salon.img} alt="leather" />
+      <div
+        className={`salon-link ${
+          props.active === props.salon.type ? 'active' : ''
+        }`}
+      >
+        <div className="salon-nav" onClick={changeActiveSalon}>
+          <img src={props.salon.img} alt="leather" />
+        </div>
       </div>
-    </div>
+    </ConfiguratorTooltip>
   );
 };
 

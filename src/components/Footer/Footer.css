@@ -17,3 +17,19 @@
 .footer-menu a:last-child {
   margin-right: 0;
 }
+
+@media screen and (max-width: 500px) {
+  .footer-menu a {
+    margin-right: 15px;
+  }
+
+  .footer .wrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-menu {
+    margin-bottom: 25px;
+  }
+}

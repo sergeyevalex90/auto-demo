@@ -17,6 +17,7 @@
 }
 
 .about-desc {
+  box-sizing: border-box;
   padding-right: 5rem;
 }
 
@@ -37,4 +38,62 @@
   font-size: 28px;
   font-family: 'Lato', sans-serif;
   margin: 35px 0;
+}
+
+@media screen and (max-width: 1366px) {
+  .title {
+    font-size: 40px;
+    margin-bottom: 30px;
+  }
+
+  .about-desc {
+    width: 65%;
+  }
+
+  .about-desc h3 {
+    font-size: 24px;
+  }
+
+  .about-desc p {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .about-inner {
+    flex-direction: column;
+  }
+
+  .about-title {
+    text-align: left;
+  }
+
+  .about-desc {
+    width: 100%;
+    padding-right: 0;
+  }
+
+  .about-desc h3 {
+    margin: 20px 0;
+  }
+
+  .aboutImage {
+    margin-top: 35px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about {
+    margin-top: 35px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 35px;
+  }
+
+  .about-desc h3 {
+    font-size: 20px;
+  }
 }

@@ -10,3 +10,9 @@
   display: flex;
   margin-bottom: 40px;
 }
+
+@media screen and (max-width: 768px) {
+  .configurator-select {
+    margin-bottom: 20px;
+  }
+}
