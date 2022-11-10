@@ -61,6 +61,10 @@
   background-color: #00008b;
 }
 
+.color-light-brown {
+  background-color: #c4a484;
+}
+
 .color-nav:after {
   border-radius: inherit;
   box-shadow: inset 0 1px 1px rgb(0 0 0 / 10%);

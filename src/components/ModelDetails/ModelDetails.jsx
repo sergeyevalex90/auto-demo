@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import Configurator from './Configurator/Configurator';
 
 //Data
@@ -21,10 +22,11 @@ function createData(name, value) {
 }
 
 const ModelDetails = (props) => {
+  const { t } = useTranslation();
   //Get model data
   const { id } = useParams();
   const model = CARS.find((car) => car.id === parseInt(id));
-  let { name, transmission, colors, salons, fuel, engine, price, img } = model;
+  let { name, colors, salons, fuel, engine, price } = model;
 
   //Get color from model
   let defaultColor = colors.filter((color) => {
@@ -59,18 +61,18 @@ const ModelDetails = (props) => {
 
   //Creating table rows with data
   const rows = [
-    createData('Transmission', transmission),
-    createData('Color', color.colorName),
-    createData('Salon', salon.type),
-    createData('Fuel', fuelItem),
-    createData('Engine', engineItem.volume),
-    createData('Price', price + ' $'),
+    createData(t('model.transmission'), t('transmission.automatic')),
+    createData(t('model.color'), t(`colors.${color['colorName']}`)),
+    createData(t('model.salon'), t(`salon.${salon['type']}`)),
+    createData(t('model.fuel'), t(`fuel.${fuelItem}`)),
+    createData(t('model.engine'), engineItem.volume),
+    createData(t('model.price'), price + ' $'),
   ];
 
   return (
     <div className="wrapper">
       <div className="model-details">
-        <ModelDetailsImg image={color.img} />
+        <ModelDetailsImg image={color.img} name={name} />
         <div className="model-right-info">
           <h1 className="model-title">{name}</h1>
           <div className="model-configuration">

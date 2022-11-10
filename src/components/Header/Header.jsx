@@ -1,14 +1,16 @@
 import React from 'react';
+import MainMenu from './MainMenu/MainMenu';
 import MobileMenu from './MobileMenu/MobileMenu';
+import LanguageSwitcher from './LanguageSwitcher/LanguageSwitcher';
+
+//Material UI
+import Link from '@mui/material/Link';
 
 //Styles
 import './Header.css';
 
 //Assets
 import logoImg from '../../assets/img/bmw-logo.svg';
-
-//Material UI
-import Link from '@mui/material/Link';
 
 const Header = (props) => {
   return (
@@ -18,16 +20,9 @@ const Header = (props) => {
           <img src={logoImg} alt="Auto demo" />
         </Link>
         <div className="header-menu">
-          <Link href="/models" underline="none" color="inherit">
-            Models
-          </Link>
-          <Link href="#" underline="none" color="inherit">
-            About
-          </Link>
-          <Link href="#" underline="none" color="inherit">
-            Contacts
-          </Link>
+          <MainMenu />
         </div>
+        <LanguageSwitcher />
         <MobileMenu />
       </div>
     </header>

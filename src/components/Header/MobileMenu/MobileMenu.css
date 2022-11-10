@@ -107,6 +107,20 @@
   width: 41px;
 }
 
+.mobile-nav .lang-switcher {
+  display: flex;
+}
+
+.mobile-nav .lang-item {
+  color: #333333;
+  font-size: 28px;
+}
+
+.mobile-nav .lang-item.active {
+  box-shadow: inset 100px 0 0 0 #333333;
+  color: #ffffff;
+}
+
 @media screen and (max-width: 1024px) {
   .mobile-nav {
     display: block;

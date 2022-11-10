@@ -1,24 +1,18 @@
-import Link from '@mui/material/Link';
+import { useTranslation } from 'react-i18next';
+import MainMenu from '../Header/MainMenu/MainMenu';
+
+//Style
 import './Footer.css';
 
 const Footer = () => {
+  const { t } = useTranslation();
   return (
     <footer className="footer">
       <div className="wrapper">
         <div className="footer-menu">
-          <Link href="#" underline="none" color="inherit">
-            Models
-          </Link>
-          <Link href="#" underline="none" color="inherit">
-            About
-          </Link>
-          <Link href="#" underline="none" color="inherit">
-            Contacts
-          </Link>
+          <MainMenu />
         </div>
-        <div className="copyright">
-          © 2022 AUTO DEMO, Inc. All Rights Reserved
-        </div>
+        <div className="copyright">{t('footer.copyright')}</div>
       </div>
     </footer>
   );

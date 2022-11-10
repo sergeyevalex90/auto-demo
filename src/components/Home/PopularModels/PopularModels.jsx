@@ -1,9 +1,15 @@
-import Model from '../../Models/Model';
+import { useTranslation } from 'react-i18next';
+import Model from '../../Models/Model/Model';
+
+//Material UI
 import Button from '@mui/material/Button';
 
+//Styles
 import './PopularModels.css';
 
 const PopularModels = (props) => {
+  const { t } = useTranslation();
+
   const popularModels = props.models.filter((model) => {
     return model.popular === true;
   });
@@ -11,14 +17,16 @@ const PopularModels = (props) => {
   return (
     <div className="wrapper">
       <div className="models">
-        <h2 className="models-title title">Most popular models</h2>
+        <h2 className="models-title title">
+          {t('popularModels.popularTitle')}
+        </h2>
         <div className="models-inner">
           {popularModels.map((model) => (
             <Model key={model.id} model={model} />
           ))}
         </div>
         <Button variant="contained" href="/models">
-          View all
+          {t('models.viewAll')}
         </Button>
       </div>
     </div>

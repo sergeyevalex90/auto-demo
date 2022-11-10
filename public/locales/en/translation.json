@@ -1,0 +1,63 @@
+{
+  "headerMenu": {
+    "models": "Models",
+    "about": "About",
+    "contacts": "Contacts"
+  },
+  "slider": {
+    "readMore": "Read more"
+  },
+  "about": {
+    "aboutTitle": "About company",
+    "aboutSubtitle1": "The BMW Group company profile",
+    "aboutSubtitle2": "Production today and tomorrow",
+    "aboutText1": "The special fascination of the BMW Group not only lies in its products and technology, but also in the company's history, written by inventors, pioneers and brilliant designers. Today, the BMW Group, with its 31 production and assembly facilities in 15 countries as well as a global sales network, is the world's leading manufacturer of premium automobiles and motorcycles, and provider of premium financial and mobility services.",
+    "aboutText2": "The BMW Group sets trends in production technology and sustainability as an innovation leader with an intelligent material mix, a technological shift towards digitalisation and resource-efficient production. At the same time, flexibility and continuous optimisation of value chains ensure competitiveness."
+  },
+  "popularModels": {
+    "popularTitle": "Most popular models"
+  },
+  "model": {
+    "transmission": "Transmission",
+    "color": "Color",
+    "salon": "Salon",
+    "fuel": "Fuel",
+    "engine": "Engine",
+    "price": "Price",
+    "build": "Build"
+  },
+  "models": {
+    "viewAll": "View all",
+    "availableCars": "Available cars"
+  },
+  "footer": {
+    "copyright": "© 2022 AUTO DEMO, Inc. All Rights Reserved"
+  },
+  "colors": {
+    "black": "black",
+    "blue": "blue",
+    "white": "white",
+    "metalic": "metalic",
+    "orange": "orange",
+    "dark-blue": "dark blue",
+    "light-brown": "light brown",
+    "gray": "gray"
+  },
+  "transmission": {
+    "automatic": "automatic"
+  },
+  "salon": {
+    "cloth": "cloth",
+    "leather": "leather"
+  },
+  "fuel": {
+    "petrol": "petrol",
+    "diesel": "diesel"
+  },
+  "configurator": {
+    "colors": "colors",
+    "fuel": "fuel",
+    "engine": "engine",
+    "salon": "salon"
+  }
+}

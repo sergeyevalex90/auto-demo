@@ -175,13 +175,13 @@ const CARS = [
         img: model7black,
       },
       {
-        colorName: 'pure',
+        colorName: 'light-brown',
         price: 2000,
         default: false,
         img: model7pure,
       },
       {
-        colorName: 'gray-blue',
+        colorName: 'gray',
         price: 3000,
         default: true,
         img: model7grayblue,

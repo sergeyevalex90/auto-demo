@@ -1,8 +1,13 @@
 import React, { useState } from 'react';
-import './ConfiguratorColors.css';
+import { useTranslation } from 'react-i18next';
 import ConfiguratorColorItem from './ConfiguratorColorItem/ConfiguratorColorItem';
 
+//Styles
+import './ConfiguratorColors.css';
+
 const ConfiguratorColors = (props) => {
+  const { t } = useTranslation();
+
   const defaultColor = props.colors.find((color) => {
     return color.default === true;
   });
@@ -17,7 +22,7 @@ const ConfiguratorColors = (props) => {
 
   return (
     <div className="configurator-group">
-      <div className="configurator-label">Colors</div>
+      <div className="configurator-label">{t('configurator.colors')}</div>
       <div className="configurator-select">
         {props.colors.map((color) => (
           <ConfiguratorColorItem

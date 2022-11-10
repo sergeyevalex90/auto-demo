@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
-
-//Material UI
-import Link from '@mui/material/Link';
+import { useTranslation } from 'react-i18next';
+import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher';
 
 //Styles
 import './MobileMenu.css';
 
 const MobileMenu = (props) => {
   const [navbarOpen, setNavbarOpen] = useState(false);
+
+  const { t } = useTranslation();
 
   const toggleHandler = () => {
     setNavbarOpen((prev) => !prev);
@@ -26,13 +27,16 @@ const MobileMenu = (props) => {
       </div>
       <ul className={`menu-nav ${navbarOpen ? ' show-nav' : ''}`}>
         <li>
-          <a href="/models">Models</a>
+          <a href="/models">{t('headerMenu.models')}</a>
         </li>
         <li>
-          <a href="#">About</a>
+          <a href="/about">{t('headerMenu.about')}</a>
         </li>
         <li>
-          <a href="#">Contacts</a>
+          <a href="/contacts">{t('headerMenu.contacts')}</a>
+        </li>
+        <li>
+          <LanguageSwitcher />
         </li>
       </ul>
     </nav>

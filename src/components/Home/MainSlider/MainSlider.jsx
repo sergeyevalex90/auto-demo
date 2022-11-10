@@ -1,41 +1,29 @@
-import sliderImg1 from '../../../assets/img/slides/bmw-5-series-slide.jpg';
-import sliderImg2 from '../../../assets/img/slides/bmw-x1-series-slide.jpg';
-import sliderImg3 from '../../../assets/img/slides/bmw-7-series-slide.jpg';
 import React, { Component } from 'react';
+import { withTranslation } from 'react-i18next';
+
 //Styles
 import './MainSlider.css';
 
 //Matertial UI
 import Button from '@mui/material/Button';
 
+//Slick
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-// const MainSlider = (props) => {
-//   return (
-//     <div className="wrapper">
-//       <div className="slider">
-//         <div className="slider-img">
-//           <img src={sliderImg} alt="BMW 5 series" />
-//         </div>
-//         <div className="slider-desc">
-//           <div className="slider-circle blue"></div>
-//           <div className="slider-circle dark-blue"></div>
-//           <div className="slider-info">
-//             <div className="slider-model-name">BMW X300</div>
-//             <div className="slider-model-year">2023 edition</div>
-//             <Button href="/models/120" variant="contained" size="small">
-//               Read more
-//             </Button>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
+//Assets
+import sliderImg1 from '../../../assets/img/slides/bmw-5-series-slide.jpg';
+import sliderImg2 from '../../../assets/img/slides/bmw-x1-series-slide.jpg';
+import sliderImg3 from '../../../assets/img/slides/bmw-7-series-slide.jpg';
 
-// export default MainSlider;
+class SliderReadMore extends Component {
+  render() {
+    const { t } = this.props;
+    return <span>{t('slider.readMore')}</span>;
+  }
+}
+const ReadMore = withTranslation()(SliderReadMore);
 
 export default class SimpleSlider extends Component {
   constructor(props) {
@@ -75,7 +63,7 @@ export default class SimpleSlider extends Component {
                   <div className="slider-model-name">BMW 5 Series</div>
                   <div className="slider-model-year">2023 edition</div>
                   <Button href="/models/120" variant="contained" size="small">
-                    Read more
+                    <ReadMore />
                   </Button>
                 </div>
               </div>
@@ -91,7 +79,7 @@ export default class SimpleSlider extends Component {
                   <div className="slider-model-name">BMW X1 Series</div>
                   <div className="slider-model-year">2023 edition</div>
                   <Button href="/models/120" variant="contained" size="small">
-                    Read more
+                    <ReadMore />
                   </Button>
                 </div>
               </div>
@@ -107,7 +95,7 @@ export default class SimpleSlider extends Component {
                   <div className="slider-model-name">BMW 7 Series</div>
                   <div className="slider-model-year">2023 edition</div>
                   <Button href="/models/120" variant="contained" size="small">
-                    Read more
+                    <ReadMore />
                   </Button>
                 </div>
               </div>

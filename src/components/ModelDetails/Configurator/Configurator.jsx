@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ConfiguratorColors from './ConfiguratorColors/ConfiguratorColors';
 import ConfiguratorSalon from './ConfiguratorSalon/ConfiguratorSalon';
 import ConfiguratorFuel from './ConfiguratorFuel/ConfiguratorFuel';

@@ -1,0 +1,31 @@
+.lang-switcher {
+  display: flex;
+  cursor: pointer;
+}
+
+.lang-item {
+  padding: 0 3px;
+  box-shadow: inset 0 0 0 0 #ffffff;
+  color: #ffffff;
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.lang-item.active {
+  box-shadow: inset 100px 0 0 0 #ffffff;
+  color: #333333;
+}
+
+.lang-item:hover {
+  box-shadow: inset 100px 0 0 0 #ffffff;
+  color: #333333;
+}
+
+.lang-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 1024px) {
+  .lang-switcher {
+    display: none;
+  }
+}

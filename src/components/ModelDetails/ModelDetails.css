@@ -76,3 +76,10 @@
     top: 85px;
   }
 }
+
+@media screen and (max-width: 500px) {
+  .model-title {
+    font-size: 16px;
+    top: 70px;
+  }
+}

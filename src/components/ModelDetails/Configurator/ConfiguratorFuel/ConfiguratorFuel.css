@@ -3,6 +3,11 @@
   min-width: 200px;
 }
 
+#demo-select-small {
+  background-color: #efefef;
+  padding-right: 5px;
+}
+
 @media screen and (max-width: 768px) {
   .configurator .select-input {
     min-width: 150px;

@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useTransition } from 'react';
+import { useTranslation } from 'react-i18next';
 
 //Material UI
 import InputLabel from '@mui/material/InputLabel';
@@ -11,6 +12,8 @@ import './ConfiguratorFuel.css';
 
 const ConfiguratorFuel = (props) => {
   const [fuelValue, setFuelValue] = useState('');
+
+  const { t } = useTranslation();
 
   const fuelChangeHandler = (event) => {
     setFuelValue(event.target.value);
@@ -30,10 +33,12 @@ const ConfiguratorFuel = (props) => {
       <div className="configurator-select">
         <FormControl
           className="select-input"
-          sx={{ m: 1, minWidth: 2000 }}
+          sx={{ m: 1, minWidth: 200 }}
           size="small"
         >
-          <InputLabel id="demo-select-small">Fuel</InputLabel>
+          <InputLabel id="demo-select-small">
+            {t('configurator.fuel')}
+          </InputLabel>
           <Select
             labelId="demo-select-small"
             id="demo-select-small"
